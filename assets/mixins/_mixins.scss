@@ -28,6 +28,20 @@
     }
 }
 
+@mixin btn-full2 {
+    background-color: black;
+    color: white;
+    padding: 10px 100px;
+    border-radius: 25px;
+    transition: all 1s;
+
+    &:hover{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
+
 @mixin btn-ghost {
     border: 1px solid white;
     border-radius: 25px;

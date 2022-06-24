@@ -20,23 +20,58 @@ p {
 
 header {
   height: 100vh;
+  background: linear-gradient(
+      0deg,
+      rgba(36, 19, 0, 0.4738270308123249) 10%,
+      rgba(45, 36, 36, 0.5130427170868348) 30%,
+      rgba(254, 231, 231, 0.4654236694677871) 95%
+    ),
+    url(/assets/images/header/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg);
   @include background;
   color: white;
 
   .navbar {
     padding: 20px 80px;
+    align-items: baseline;
 
     input {
       background: transparent;
-    }
 
+      &::placeholder {
+        color: white;
+      }
+    }
     span {
       background: transparent;
     }
 
-    a {
-      img {
-        margin-bottom: 15px;
+    .navbar-content {
+      button {
+        background: transparent;
+        border: 0;
+
+        &:hover {
+          background: $background-color;
+        }
+      }
+
+      .offcanvas-body {
+        display: flex;
+        @include flex-center;
+        gap: 150px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          border: 1px solid white;
+          border-radius: 15px;
+          padding: 10px 30px;
+
+          &:hover {
+            background-color: black;
+            border: 1px solid black;
+          }
+        }
       }
     }
   }
@@ -58,99 +93,300 @@ header {
     }
   }
 
-  .header-btn{
+  .header-btn {
     margin: 25px 0;
 
-    .btn-full{
-        @include btn-full;
-        margin: 0 30px;
+    .btn-full {
+      @include btn-full;
+      margin: 0 30px;
     }
 
-    .btn-ghost{
-        @include btn-ghost;
+    .btn-ghost {
+      @include btn-ghost;
     }
   }
 }
 
 /* ============================== SALADES */
 
-.salades{
+.salades {
+  display: flex;
+  flex-flow: column;
+  padding: 100px;
+
+  .salades-section {
     display: flex;
-    flex-flow: column;
-    padding: 100px;
+    gap: 50px;
+  }
 
-    .salades-section{
-        display: flex;
-        gap: 50px;
+  .salades-content {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .salades-photo {
+    width: 600px;
+    height: auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  .salades-texte {
+    padding: 15px;
+
+    h3 {
+      font-size: 200%;
     }
 
-    .salades-content{
-        display: flex;
-        gap: 50px;
-        margin-bottom: 50px;
+    .prix {
+      font-size: 300%;
+      font-weight: 900;
+      margin: 40px 0;
     }
 
-    .salades-photo{
-        width: 600px;
-        height: auto;
-        
-        img{
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-        }
+    p {
+      font-size: 100%;
     }
-
-    .salades-texte{
-        padding: 15px;
-
-        h3{
-            font-size: 200%;
-        }
-
-        .prix{
-            font-size: 300%;
-            font-weight: 900;
-            margin: 40px 0;
-        }
-
-        p{
-            font-size: 100%;
-        }
-    }
+  }
 }
 
 /* ============================== SOIRÉE */
 
-.soirée{
-    background-color: $background-color;
-    
+.soirée {
+  background-color: $background-color;
 
-    .soirée-content{
-        padding: 0;
-        display: flex;
-        flex-flow: column;
-        gap: 30px;
-        @include flex-center;
-        color: white;
-        
-        h2{
-            font-size: 600%;
-            text-shadow: 2px 2px 2px black;
-        }
+  .soirée-content {
+    height: 800px;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 80px;
+    @include flex-center;
+    color: white;
 
-        p{
-            width: 60%;
-        }
-
-        .btn-full{
-            @include btn-full;
-        }
-
-        img{
-            display: block;
-            width: 100%;
-            margin: 0 auto;
-        }
+    h2 {
+      font-size: 600%;
+      text-shadow: 2px 2px 2px black;
     }
+
+    p {
+      width: 60%;
+    }
+
+    .btn-full {
+      @include btn-full;
+    }
+  }
+  .soirée-photo {
+    background: url(/assets/images/section-soirée/monika-grabkowska-P1aohbiT-EY-unsplash.jpg);
+    @include background;
+  }
+}
+
+/* ============================== APPRENDRE */
+
+.apprendre {
+  padding: 80px 0;
+  color: black;
+  text-align: center;
+
+  .apprendre-titre {
+    h2 {
+      font-size: 600%;
+      text-shadow: 2px 2px 2px $background-color;
+      margin: 20px 0;
+    }
+  }
+
+  .apprendre-carousel {
+    margin: 50px 0;
+
+    img {
+      height: 800px;
+    }
+  }
+
+  .apprendre-btn {
+    margin: 50px 0;
+
+    .btn {
+      @include btn-full2;
+    }
+  }
+}
+
+/* ============================== GLACE */
+
+.glace {
+  background-color: $background-color;
+
+  .glace-content {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 80px;
+    @include flex-center;
+    color: white;
+
+    h2 {
+      font-size: 600%;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    p {
+      width: 60%;
+    }
+
+    .btn-full {
+      @include btn-full;
+    }
+  }
+  .glace-photo {
+    background: url(/assets/images/section-glace/slashio-photography-uMYxldWYSZk-unsplash.jpg);
+    @include background;
+  }
+}
+
+/* ============================== FRESH */
+
+.fresh {
+  .fresh-content {
+    height: 100vh;
+    padding: 50px 0;
+    padding-left: 200px;
+    padding-right: 20px;
+    color: black;
+
+    .fresh-titre {
+      color: $background-color;
+
+      h3 {
+        font-size: 350%;
+      }
+
+      span {
+        color: #8b6948cd;
+      }
+    }
+
+    .fresh-cercle {
+      margin: 50px 0;
+      height: 400px;
+      width: 400px;
+      background-color: #8b6a48;
+      border-radius: 50%;
+      display: flex;
+      flex-flow: column;
+      @include flex-center;
+
+      h2 {
+        color: white;
+        font-size: 350%;
+        font-weight: 900;
+      }
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    p {
+      margin: 50px 0;
+    }
+  }
+  .fresh-photo {
+    background: url(/assets/images/section-fresh/brooke-lark-nBtmglfY0HU-unsplash.jpg);
+    @include background;
+  }
+}
+
+/* ============================== BIO */
+
+.bio {
+  height: 600px;
+  background: url(/assets/images/section-bio/bio-background-removebg-preview.png);
+  @include background;
+  display: flex;
+  @include flex-center;
+
+  .bio-content {
+    text-align: center;
+
+    h2 {
+      font-size: 500%;
+      font-weight: 600;
+      text-shadow: 2px 2px 2px $background-color;
+    }
+
+    p {
+      margin: 50px 0;
+    }
+
+    .btn {
+      @include btn-full2;
+    }
+  }
+}
+
+/* ============================== ABO */
+
+.abo {
+  height: 80vh;
+  background-color: $background-color;
+  @include background;
+  display: flex;
+  @include flex-center;
+
+  .abo-content {
+    text-align: center;
+    color: white;
+    width: 50%;
+
+    h2 {
+      font-size: 500%;
+      font-weight: 600;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    p {
+      margin: 50px 0;
+    }
+
+    input {
+      background: transparent;
+      border: 2px solid white;
+      width: 80%;
+      margin: 0 auto;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    .btn {
+      @include btn-full;
+      margin: 15px 0;
+      width: 80%;
+    }
+  }
+}
+
+/* ============================== FOOTER */
+
+footer {
+  background-color: black;
+  height: 150px;
+  display: flex;
+  flex-flow: column;
+  @include flex-center;
+
+  h6 {
+    color: white;
+  }
 }

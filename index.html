@@ -37,7 +37,7 @@
 
     <!-- ======================================= HEADER -->
 
-    <header style="background-image: url(/assets/images/header/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg)">
+    <header>
         <div class="navbar">
             <div class="navbar-content">
                 <div class="input-group mb-3">
@@ -48,7 +48,21 @@
                 </div>
             </div>
             <div class="navbar-content">
-                <a href="#"><img src="/assets/icons/icons8-menu-30.png" alt="hamburger"></a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                    aria-controls="offcanvasTop"><img src="/assets/icons/icons8-menu-30.png" alt=""></button>
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
+                    aria-labelledby="offcanvasTopLabel" style="background-color: #8b6a48">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasTopLabel">Menus</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="/index.html#plats">Plats</a>
+                        <a href="/index.html#glace">Glaces</a>
+                        <a href="/index.html#abo">Abonnement</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="section-header">
@@ -72,7 +86,7 @@
 
     <!-- ======================================= SALADES -->
 
-    <section class="salades">
+    <section class="salades" id="plats">
         <div class="salades-section">
             <div class="salades-content">
                 <div class="salades-photo">
@@ -139,9 +153,7 @@
                     </p>
                     <button class="btn btn-full">LIRE LA SUITE</button>
                 </div>
-                <div class="col-sm-6 soirée-content">
-                    <img src="/assets/images/section-soirée/monika-grabkowska-P1aohbiT-EY-unsplash.jpg" alt="Fruits">
-                </div>
+                <div class="col-sm-6 soirée-photo"></div>
             </div>
         </div>
     </section>
@@ -169,15 +181,15 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/assets/images/section-apprendre/jonas-allert-MZ0U0g6RQpQ-unsplash.jpg"
+                                <img src="/assets/images/section-apprendre/brooke-lark-jUPOXXRNdcA-unsplash.jpg"
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/assets/images/section-apprendre/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg"
+                                <img src="/assets/images/section-apprendre/davide-cantelli-jpkfc5_d-DI-unsplash.jpg"
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/assets/images/section-apprendre/ronise-daluz-LgTyii0GDKQ-unsplash.jpg"
+                                <img src="/assets/images/section-apprendre/jimmy-dean-Yn0l7uwBrpw-unsplash.jpg"
                                     class="d-block w-100" alt="...">
                             </div>
                         </div>
@@ -200,13 +212,81 @@
         </div>
     </section>
 
+    <!-- ======================================= GLACE -->
 
+    <section class="glace" id="glace">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 glace-content">
+                    <h2>Notre Glace</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi atque dolor doloremque deleniti?
+                        Asperiores facere ipsa incidunt nesciunt quos minima corporis ab voluptates repellendus dolores.
+                    </p>
+                    <button class="btn btn-full">LIRE LA SUITE</button>
+                </div>
+                <div class="col-sm-6 glace-photo"></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ======================================= FRESH -->
 
+    <section class="fresh">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 fresh-content">
+                    <div class="fresh-titre">
+                        <h3>100% <img src="/assets/icons/icons8-feuille-de-chêne-50.png" alt=""> <br>
+                            Fresh <span>Food</span></h3>
+                    </div>
+                    <div class="fresh-cercle">
+                        <h2>30%</h2>
+                        <h2>DE</h2>
+                        <h2>RÉDUCTION</h2>
+                    </div>
+                    <h4>NOURRITURE SAINE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi atque dolor doloremque deleniti?
+                        Asperiores facere ipsa incidunt nesciunt quos minima corporis ab voluptates repellendus dolores.
+                    </p>
+                </div>
+                <div class="col-sm-6 fresh-photo"></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ======================================= BIO -->
 
+    <section class="bio">
+        <div class="bio-content">
+            <h2>100% de bonté<br>biologique</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magnam impedit placeat a? Officiis
+                eveniet est, amet sunt nam sed!</p>
+            <button class="btn btn-full">LIRE LA SUITE</button>
+        </div>
+    </section>
 
+    <!-- ======================================= ABO -->
 
+    <section class="abo" id="abo">
+        <div class="abo-content">
+            <h2>Abonnez-vous <br> et suivez-nous</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perspiciatis incidunt saepe soluta harum
+                deserunt ipsam provident, minima minus sapiente magnam animi neque, pariatur facilis unde dolore
+                cupiditate nemo et.</p>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+            </div>
+            <button class="btn btn-full">S'ABONNER</button>
+
+        </div>
+    </section>
+
+    <!-- ======================================= FOOTER -->
+
+    <footer>
+        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, dolores?</h6>
+        <h6>Lorem ipsum dolor sit amet.</h6>
+    </footer>
 
 
 

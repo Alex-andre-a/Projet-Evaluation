@@ -16,6 +16,8 @@ p {
 /* ============================== HEADER */
 header {
   height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(36, 19, 0, 0.473827)), color-stop(30%, rgba(45, 36, 36, 0.513043)), color-stop(95%, rgba(254, 231, 231, 0.465424))), url(/assets/images/header/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg);
+  background: linear-gradient(0deg, rgba(36, 19, 0, 0.473827) 10%, rgba(45, 36, 36, 0.513043) 30%, rgba(254, 231, 231, 0.465424) 95%), url(/assets/images/header/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,18 +26,68 @@ header {
 
 header .navbar {
   padding: 20px 80px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 header .navbar input {
   background: transparent;
 }
 
+header .navbar input::-webkit-input-placeholder {
+  color: white;
+}
+
+header .navbar input:-ms-input-placeholder {
+  color: white;
+}
+
+header .navbar input::-ms-input-placeholder {
+  color: white;
+}
+
+header .navbar input::placeholder {
+  color: white;
+}
+
 header .navbar span {
   background: transparent;
 }
 
-header .navbar a img {
-  margin-bottom: 15px;
+header .navbar .navbar-content button {
+  background: transparent;
+  border: 0;
+}
+
+header .navbar .navbar-content button:hover {
+  background: #8b6a48;
+}
+
+header .navbar .navbar-content .offcanvas-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 150px;
+}
+
+header .navbar .navbar-content .offcanvas-body a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px 30px;
+}
+
+header .navbar .navbar-content .offcanvas-body a:hover {
+  background-color: black;
+  border: 1px solid black;
 }
 
 header .section-header {
@@ -163,6 +215,7 @@ header .header-btn .btn-ghost:hover {
 }
 
 .soirée .soirée-content {
+  height: 800px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,7 +224,7 @@ header .header-btn .btn-ghost:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  gap: 30px;
+  gap: 80px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -204,9 +257,311 @@ header .header-btn .btn-ghost:hover {
   border: 1px solid white;
 }
 
-.soirée .soirée-content img {
-  display: block;
-  width: 100%;
+.soirée .soirée-photo {
+  background: url(/assets/images/section-soirée/monika-grabkowska-P1aohbiT-EY-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============================== APPRENDRE */
+.apprendre {
+  padding: 80px 0;
+  color: black;
+  text-align: center;
+}
+
+.apprendre .apprendre-titre h2 {
+  font-size: 600%;
+  text-shadow: 2px 2px 2px #8b6a48;
+  margin: 20px 0;
+}
+
+.apprendre .apprendre-carousel {
+  margin: 50px 0;
+}
+
+.apprendre .apprendre-carousel img {
+  height: 800px;
+}
+
+.apprendre .apprendre-btn {
+  margin: 50px 0;
+}
+
+.apprendre .apprendre-btn .btn {
+  background-color: black;
+  color: white;
+  padding: 10px 100px;
+  border-radius: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.apprendre .apprendre-btn .btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* ============================== GLACE */
+.glace {
+  background-color: #8b6a48;
+}
+
+.glace .glace-content {
+  height: 100vh;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.glace .glace-content h2 {
+  font-size: 600%;
+  text-shadow: 2px 2px 2px black;
+}
+
+.glace .glace-content p {
+  width: 60%;
+}
+
+.glace .glace-content .btn-full {
+  background-color: white;
+  padding: 10px 100px;
+  border-radius: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.glace .glace-content .btn-full:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.glace .glace-photo {
+  background: url(/assets/images/section-glace/slashio-photography-uMYxldWYSZk-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============================== FRESH */
+.fresh .fresh-content {
+  height: 100vh;
+  padding: 50px 0;
+  padding-left: 200px;
+  padding-right: 20px;
+  color: black;
+}
+
+.fresh .fresh-content .fresh-titre {
+  color: #8b6a48;
+}
+
+.fresh .fresh-content .fresh-titre h3 {
+  font-size: 350%;
+}
+
+.fresh .fresh-content .fresh-titre span {
+  color: #8b6948cd;
+}
+
+.fresh .fresh-content .fresh-cercle {
+  margin: 50px 0;
+  height: 400px;
+  width: 400px;
+  background-color: #8b6a48;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fresh .fresh-content .fresh-cercle h2 {
+  color: white;
+  font-size: 350%;
+  font-weight: 900;
+}
+
+.fresh .fresh-content h4 {
+  font-weight: bold;
+}
+
+.fresh .fresh-content p {
+  margin: 50px 0;
+}
+
+.fresh .fresh-photo {
+  background: url(/assets/images/section-fresh/brooke-lark-nBtmglfY0HU-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============================== BIO */
+.bio {
+  height: 600px;
+  background: url(/assets/images/section-bio/bio-background-removebg-preview.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bio .bio-content {
+  text-align: center;
+}
+
+.bio .bio-content h2 {
+  font-size: 500%;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #8b6a48;
+}
+
+.bio .bio-content p {
+  margin: 50px 0;
+}
+
+.bio .bio-content .btn {
+  background-color: black;
+  color: white;
+  padding: 10px 100px;
+  border-radius: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.bio .bio-content .btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* ============================== ABO */
+.abo {
+  height: 80vh;
+  background-color: #8b6a48;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.abo .abo-content {
+  text-align: center;
+  color: white;
+  width: 50%;
+}
+
+.abo .abo-content h2 {
+  font-size: 500%;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px black;
+}
+
+.abo .abo-content p {
+  margin: 50px 0;
+}
+
+.abo .abo-content input {
+  background: transparent;
+  border: 2px solid white;
+  width: 80%;
   margin: 0 auto;
+}
+
+.abo .abo-content input::-webkit-input-placeholder {
+  color: white;
+}
+
+.abo .abo-content input:-ms-input-placeholder {
+  color: white;
+}
+
+.abo .abo-content input::-ms-input-placeholder {
+  color: white;
+}
+
+.abo .abo-content input::placeholder {
+  color: white;
+}
+
+.abo .abo-content .btn {
+  background-color: white;
+  padding: 10px 100px;
+  border-radius: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 15px 0;
+  width: 80%;
+}
+
+.abo .abo-content .btn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+/* ============================== FOOTER */
+footer {
+  background-color: black;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer h6 {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
