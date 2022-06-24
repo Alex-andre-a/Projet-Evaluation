@@ -1,0 +1,156 @@
+@import "./assets/mixins/mixins";
+@import "./assets/variables/variables";
+
+/* ============================== GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 130%;
+  letter-spacing: 1px;
+  line-height: 30px;
+  border-radius: 12px;
+}
+
+/* ============================== HEADER */
+
+header {
+  height: 100vh;
+  @include background;
+  color: white;
+
+  .navbar {
+    padding: 20px 80px;
+
+    input {
+      background: transparent;
+    }
+
+    span {
+      background: transparent;
+    }
+
+    a {
+      img {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .section-header {
+    display: flex;
+    flex-flow: column;
+    @include flex-center;
+    height: 100%;
+
+    h1 {
+      @include h1;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      width: 40%;
+    }
+  }
+
+  .header-btn{
+    margin: 25px 0;
+
+    .btn-full{
+        @include btn-full;
+        margin: 0 30px;
+    }
+
+    .btn-ghost{
+        @include btn-ghost;
+    }
+  }
+}
+
+/* ============================== SALADES */
+
+.salades{
+    display: flex;
+    flex-flow: column;
+    padding: 100px;
+
+    .salades-section{
+        display: flex;
+        gap: 50px;
+    }
+
+    .salades-content{
+        display: flex;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .salades-photo{
+        width: 600px;
+        height: auto;
+        
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    .salades-texte{
+        padding: 15px;
+
+        h3{
+            font-size: 200%;
+        }
+
+        .prix{
+            font-size: 300%;
+            font-weight: 900;
+            margin: 40px 0;
+        }
+
+        p{
+            font-size: 100%;
+        }
+    }
+}
+
+/* ============================== SOIRÉE */
+
+.soirée{
+    background-color: $background-color;
+    
+
+    .soirée-content{
+        padding: 0;
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+        @include flex-center;
+        color: white;
+        
+        h2{
+            font-size: 600%;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        p{
+            width: 60%;
+        }
+
+        .btn-full{
+            @include btn-full;
+        }
+
+        img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
